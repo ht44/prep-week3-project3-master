@@ -160,7 +160,7 @@ books.ISBN11111 = {
       pages: 123
     };
 books.ISBN22222 = {
-      title: "The Brothers Karamazov",
+      title: "Crime and Punishment",
       author: "Fyodor Dostoyevsky",
       pages: 456
     };
@@ -169,6 +169,10 @@ books.ISBN33333 = {
       author: "Joseph Conrad",
       pages: 789
     };
+
+document.getElementById("qb").innerHTML += "<p>" + books.ISBN11111.title + " (Author = " + books.ISBN11111.author + ", Pages = " + books.ISBN11111.pages + ")</p>";
+document.getElementById("qb").innerHTML += "<p>" + books.ISBN22222.title + " (Author = " + books.ISBN22222.author + ", Pages = " + books.ISBN22222.pages + ")</p>";
+document.getElementById("qb").innerHTML += "<p>" + books.ISBN33333.title + " (Author = " + books.ISBN33333.author + ", Pages = " + books.ISBN33333.pages + ")</p>";
 
 
 // C. Access the author of the first book.
@@ -181,6 +185,11 @@ books.ISBN11111.dateRead = 1905;
 books.ISBN22222.dateRead = 1605;
 books.ISBN33333.dateRead = 2006;
 
+document.getElementById("qe").innerHTML += "<p>Read " + books.ISBN11111.title + " in " + books.ISBN11111.dateRead + ".</p>";
+document.getElementById("qe").innerHTML += "<p>Read " + books.ISBN22222.title + " in " + books.ISBN22222.dateRead + ".</p>";
+document.getElementById("qe").innerHTML += "<p>Read " + books.ISBN33333.title + " in " + books.ISBN33333.dateRead + ".</p>";
+
 // F. Remove the second book from the books object.
 delete books.ISBN22222;
+console.log(books);
 // G. Explain, in your own words, the difference between Literal Notation and Constructor Notation.
